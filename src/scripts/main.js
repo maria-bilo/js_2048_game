@@ -6,7 +6,8 @@
 
 // Write your code here
 
-const Game = require('../modules/Game.class').default;
+import Game from '../modules/Game.class.js';
+
 const game = new Game();
 
 const cells = [...document.querySelectorAll('.field-cell')];
