@@ -6,7 +6,7 @@
 
 // Write your code here
 
-const Game = require('../modules/Game.class');
+const Game = require('../modules/Game.class').default;
 const game = new Game();
 
 const cells = [...document.querySelectorAll('.field-cell')];
@@ -55,13 +55,22 @@ button.addEventListener('click', () => {
   render();
 });
 
-document.addEventListener('keydown', e => {
+document.addEventListener('keydown', (e) => {
   switch (e.key) {
-    case 'ArrowLeft': game.moveLeft(); break;
-    case 'ArrowRight': game.moveRight(); break;
-    case 'ArrowUp': game.moveUp(); break;
-    case 'ArrowDown': game.moveDown(); break;
-    default: return;
+    case 'ArrowLeft':
+      game.moveLeft();
+      break;
+    case 'ArrowRight':
+      game.moveRight();
+      break;
+    case 'ArrowUp':
+      game.moveUp();
+      break;
+    case 'ArrowDown':
+      game.moveDown();
+      break;
+    default:
+      return;
   }
 
   render();
