@@ -5,7 +5,7 @@
   "homepage": "https://maria-bilo.github.io/js_2048_game",
 "scripts": {
   "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+  "deploy": "mate-scripts deploy"
 },
   "keywords": [],
   "author": "Mate Academy",
